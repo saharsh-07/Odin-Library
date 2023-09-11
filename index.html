@@ -16,8 +16,28 @@
       />
     </header>
     <main>
-      <div class="container">
-      </div>
+      <dialog>
+        <span class="close">&times;</span>
+        <strong>Please enter the book details : </strong>
+        <form action="dialog">
+          <label for="book-title">Title of the Book *</label>
+          <input type="text" name="book-title" id="book-title" required/>
+
+          <label for="book-author">Author's Name *</label>
+          <input type="text" name="book-author" id="book-author" required/>
+
+          <label for="book-pages">How many pages are there in the Book *</label>
+          <input type="number" min="1" name="book-pages" id="book-pages" required/>
+
+          <label for="book-read">Have you completed the Book ? *</label>
+          <select name="book-read" id="book-read" required>
+            <option value="no" selected>Not Yet</option>
+            <option value="yes">Yes</option>
+          </select>
+          <button type="submit">Add Book To Library</button>
+        </form>
+      </dialog>
+      <div class="container"></div>
     </main>
     <script src="index.js"></script>
   </body>
