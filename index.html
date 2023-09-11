@@ -9,9 +9,12 @@
   <body>
     <header>
       <h1>Odin's Library</h1>
-      <button type="button">ADD BOOK</button>
+      <button type="button">
+        +
+        <p>ADD BOOK</p>
+      </button>
       <img
-        src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Odin%2C_der_G%C3%B6ttervater.jpg"
+        src="https://www.theodinproject.com/assets/icons/odin-icon-a34029cd84a741be4da27758dafd7d7ac3729021adea3e0701e310d91e5c1d04.svg"
         alt="Odin image"
       />
     </header>
@@ -21,13 +24,19 @@
         <strong>Please enter the book details : </strong>
         <form action="dialog">
           <label for="book-title">Title of the Book *</label>
-          <input type="text" name="book-title" id="book-title" required/>
+          <input type="text" name="book-title" id="book-title" required />
 
           <label for="book-author">Author's Name *</label>
-          <input type="text" name="book-author" id="book-author" required/>
+          <input type="text" name="book-author" id="book-author" required />
 
           <label for="book-pages">How many pages are there in the Book *</label>
-          <input type="number" min="1" name="book-pages" id="book-pages" required/>
+          <input
+            type="number"
+            min="1"
+            name="book-pages"
+            id="book-pages"
+            required
+          />
 
           <label for="book-read">Have you completed the Book ? *</label>
           <select name="book-read" id="book-read" required>
