@@ -47,7 +47,11 @@ button[type="button"] {
   min-height: fit-content;
   font-size: 5rem;
 }
-
+h1{
+  font-weight: 800;
+  font-style: oblique;
+  font-size: 3rem;
+}
 button[type="button"] p {
   font-size: 1rem;
   margin-top: -1rem;
