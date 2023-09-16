@@ -11,19 +11,20 @@ const checkmarks = document.querySelectorAll("input[type = 'checkbox'");
 const bookStatus = document.getElementById("book-read");
 let myLibrary = [];
 
-//Book object creater
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = Number(pages);
-  this.read = read === "yes" ? true : false;
-  this.info = () => {
-    return `${this.title} by ${this.author}, (${this.pages}) pages, ${
-      this.read ? "read." : "not read yet."
-    }`;
-  };
+//Book class creater
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = Number(pages);
+    this.read = read === "yes" ? true : false;
+    this.info = () => {
+      return `${this.title} by ${this.author}, (${this.pages}) pages, ${
+        this.read ? "read." : "not read yet."
+      }`;
+    };
+  }
 }
-
 //remove book from library
 const remove = (book) => {
   myLibrary = myLibrary.filter((tmp) => tmp.title !== book);
@@ -134,9 +135,10 @@ form.addEventListener("submit", (e) => {
   container.classList.remove("blur");
 });
 
-const magic = () => setTimeout(() => {
-  errorTxt.classList.add("hidden")
-}, 4000);
+const magic = () =>
+  setTimeout(() => {
+    errorTxt.classList.add("hidden");
+  }, 4000);
 
 window.onload = () => {
   magic();
